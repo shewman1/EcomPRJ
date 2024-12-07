@@ -1,0 +1,30 @@
+<div class="category">
+            {{#each products as |category|}}
+            <div class="key-wala">{{@key}}</div>
+            <div class="product-list">
+                {{#each category as |p|}}
+                        
+                        <div class="product-item">
+                            <div class="my-product-image">
+                                <img src="{{p.imageUrl}}">
+                            </div>
+                            <br>
+                            <h4>Product Name:{{p.name}}</h4>
+                            <h4>Product Price:{{p.price}}</h4>
+                                <div class="button-group">
+                                    <a href="/admin/products/update/{{p._id}}">
+                                        <button>✏️</button>
+                                    </a>
+                                    <a href="/admin/products/delete/{{p._id}}">
+                                        <button>❌</button>
+                                    </a>
+                                </div>
+                        </div>
+                    
+                {{/each}}
+            </div>
+                {{!-- <h4>Product Description:{{p.description}}</h4>
+                <h4>Product Seller:{{p.seller}}</h4>
+                <h4>Reviews: </h4> --}}
+        {{/each}}
+    </div>

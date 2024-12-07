@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    {{>generalcss}}
+    <style>
+        .button-group {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 100px;
+            min-height: 30px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    {{>navbar}}
+    <h1>Welcome to admin home page</h1>
+    <div class="button-group">
+        <a href="/admin/products/all">
+            <button>View Products</button>
+        </a>
+        <a href="/admin/products/add">
+            <button>Add new product</button>
+        </a>
+    </div>
+</body>
+</html>

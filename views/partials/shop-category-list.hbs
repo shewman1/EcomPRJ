@@ -1,0 +1,66 @@
+<div class="category">
+            {{#each products as |category|}}
+            <div class="product-list">
+                <div style="font-size: 20px;" class="key-wala">{{@key}}</div>
+                {{#each category as |p|}}
+                        
+                        <div class="product-item">
+                            <div class="my-product-image">
+                                <img class="mera-imageSize" src="{{p.imageUrl}}">
+                            </div>
+                            <br>
+                            <div class="product-detail">
+                                <h4>Product Name:{{p.name}}</h4>
+                                <h4>Product Price:{{p.price}}</h4>
+                                    <div class="button-group">
+                                        <a style="text-decoration:none ;" href="/shop/cart/add/{{p._id}}">
+                                            <button class="btn1">Add to Cart</button>
+                                        </a>
+                                        <a style="text-decoration:none ;" href="/shop/products/{{p._id}}">
+                                            <button class="btn1">Details</button>
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                    
+                {{/each}}
+            </div>
+                {{!-- <h4>Product Description:{{p.description}}</h4>
+                <h4>Product Seller:{{p.seller}}</h4>
+                <h4>Reviews: </h4> --}}
+        {{/each}}
+    </div>
+    <style>
+        .key-wala{
+            height: 20px;
+            width: 30px;
+        }
+        .btn1{
+            background-color: rgb(245, 244, 244);
+            margin-left: 10px;
+            margin: 3px;
+            width: 85px;
+            height: 23px;
+            font-size: 15px;
+        }
+        .product-list{
+            background-color: white;
+            width: 96%;
+            height: 310px;
+            margin: 10px 10px;
+        }
+        .product-item{
+            background-color: rgb(241, 238, 238);
+            width: 190px;
+            height: 295px;
+            margin: 0 5px;
+        }
+        .mera-imageSize{
+            width: 190px;
+            height: 210px;
+        }
+        .product-detail{
+            width: 100%;
+            height: 70px;
+        }
+    </style>
